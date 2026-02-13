@@ -11,7 +11,7 @@ def main():
     
     # 2. Generate Embeddings
     # Using the exact model specified in the repository and assignment
-    model = SentenceTransformer('all-MiniLM-L6-v2')
+    model = SentenceTransformer('paraphrase-MiniLM-L6-v2') # Updated model
     embeddings = model.encode(df['Description'].tolist())
     
     # Save the person_embeddings dictionary to a local file
