@@ -21,7 +21,8 @@ def main():
         
     # 3. Dimension Reduction (UMAP)
     # The assignment strictly requires setting the seed to 42 for reproducibility
-    reducer = umap.UMAP(random_state=42)
+    # reducer = umap.UMAP(random_state=42) 
+    reducer = umap.UMAP(n_neighbors=7, min_dist=0.6858581038306797, random_state=42)
     embedding_2d = reducer.fit_transform(embeddings)
     
     # 4. Visualization
